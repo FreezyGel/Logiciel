@@ -7,12 +7,11 @@
     </head>
     <body>
     <div id="Content">
-      <script src="jquery.js"></script>
       <script>
-        $(function() {
-          
-        });
-        </script>
+        function refresh() {
+          document.getElementById("Info_TeaBox").innerHTML = "Hello JavaScript!";
+        }
+      </script>
       <img id="tea" src="tea.png" style="width:40px"/>
       <h1>Tea Time</h1></br></br>
       <form method="post" action="./script.php" >
@@ -37,7 +36,7 @@
           $reponse->closeCursor();
           ?>
         </select></br></br>
-        <select onsubmit="refresh();" id="Tea">
+        <select onclick="refresh();" id="Tea">
           <?php
           //Connexion à la base de données
           try
@@ -62,6 +61,7 @@
       </form>
     </div>
     <div id="Info_Tea">
+      <p id="Info_TeaBox" />
     </div>
     </body>
   </html>
