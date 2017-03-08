@@ -10,7 +10,7 @@
   }
 
   $name = $_POST['name'];
-  $pwd = $_POST['pwd'];
+  $pwd = $_POST['pwd']; 
   $reponse = $bdd->query("SELECT * FROM T_Personne WHERE Nom_Personne='$name'");
   $userPass = $reponse->rowCount();
   if($userPass == 0)
